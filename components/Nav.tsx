@@ -19,6 +19,7 @@ const states: { [key: string]: React.CSSProperties } = {
     left: '157px',
     width: '55px',
   },
+  /*
   '/bookmarks': {
     left: '224px',
     width: '100px',
@@ -27,6 +28,7 @@ const states: { [key: string]: React.CSSProperties } = {
     left: '340px',
     width: '79px',
   },
+  */
 };
 
 const NavLink = styled.a`
@@ -60,8 +62,10 @@ const Links = (): JSX.Element => (
     <NavLink href="/">Home</NavLink>
     <NavLink href="/about">About</NavLink>
     <NavLink href="/blog">Blog</NavLink>
+    {/*
     <NavLink href="/bookmarks">Bookmarks</NavLink>
     <NavLink href="/projects">Projects</NavLink>
+    */}
   </>
 );
 
