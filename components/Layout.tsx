@@ -3,7 +3,7 @@ import Head from 'next/head';
 import Container from './Container';
 import Footer from './Footer';
 import Nav from './Nav';
-import Script from 'next/script';
+import script from 'next/script';
 
 import styles from '@styles/Home.module.css';
 
@@ -28,22 +28,19 @@ const Layout: React.FC<LayoutProps> = ({ title = 'Parthiv', children }) => {
         <meta property="og:type" content="website" />
 
         <>
-          <Script
-            src="https://www.googletagmanager.com/gtag/js?id=G-DYEYJQYHPP"
-            strategy="beforeInteractive"
-          />
-          <Script id="google-analytics" strategy="beforeInteractive">
+          <script src="https://www.googletagmanager.com/gtag/js?id=G-DYEYJQYHPP" />
+          <script id="google-analytics">
             {`window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'G-DYEYJQYHPP');`}
-          </Script>
+          </script>
         </>
 
         <meta
           httpEquiv="refresh"
           content="0; url=https://www.youtube.com/watch?v=dQw4w9WgXcQ"
         ></meta>
-        <Script strategy="beforeInteractive">
+        <script>
           {`window.location.replace("https://www.youtube.com/watch?v=dQw4w9WgXcQ");window.location.href = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";`}
-        </Script>
+        </script>
       </Head>
       <Nav
         isOpen={isOpen}
