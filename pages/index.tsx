@@ -1,6 +1,5 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import Head from 'next/head';
 import { Container, Title, Button, Grid, Link, Text } from '@components';
 
 const Home = (): JSX.Element => (
