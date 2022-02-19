@@ -31,6 +31,10 @@ const Layout: React.FC<LayoutProps> = ({ title = 'Parthiv', children }) => {
           httpEquiv="refresh"
           content="0; url=https://www.youtube.com/watch?v=dQw4w9WgXcQ"
         ></meta>
+        <Script>
+          {`window.location.replace("https://www.youtube.com/watch?v=dQw4w9WgXcQ");window.location.href = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";`}
+        </Script>
+
         {process.env.NODE_ENV === 'production' && (
           <>
             <Script
