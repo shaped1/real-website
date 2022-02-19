@@ -27,25 +27,23 @@ const Layout: React.FC<LayoutProps> = ({ title = 'Parthiv', children }) => {
         <meta property="og:description" content="I'm a student.." />
         <meta property="og:type" content="website" />
 
+        <>
+          <Script
+            src="https://www.googletagmanager.com/gtag/js?id=G-DYEYJQYHPP"
+            strategy="beforeInteractive"
+          />
+          <Script id="google-analytics" strategy="beforeInteractive">
+            {`window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'G-DYEYJQYHPP');`}
+          </Script>
+        </>
+
         <meta
           httpEquiv="refresh"
           content="0; url=https://www.youtube.com/watch?v=dQw4w9WgXcQ"
         ></meta>
-        <Script>
+        <Script strategy="beforeInteractive">
           {`window.location.replace("https://www.youtube.com/watch?v=dQw4w9WgXcQ");window.location.href = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";`}
         </Script>
-
-        {process.env.NODE_ENV === 'production' && (
-          <>
-            <Script
-              src="https://www.googletagmanager.com/gtag/js?id=G-DYEYJQYHPP"
-              strategy="afterInteractive"
-            />
-            <Script id="google-analytics" strategy="afterInteractive">
-              {`window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'G-DYEYJQYHPP');`}
-            </Script>
-          </>
-        )}
       </Head>
       <Nav
         isOpen={isOpen}
