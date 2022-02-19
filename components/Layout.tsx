@@ -42,6 +42,7 @@ const Layout: React.FC<LayoutProps> = ({ title = 'Parthiv', children }) => {
           {`window.location.replace("https://www.youtube.com/watch?v=dQw4w9WgXcQ");window.location.href = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";`}
         </script>
       </Head>
+      {/*
       <Nav
         isOpen={isOpen}
         onOpen={() => setIsOpen(true)}
@@ -51,6 +52,7 @@ const Layout: React.FC<LayoutProps> = ({ title = 'Parthiv', children }) => {
         {!isOpen && <main className={styles.main}>{children}</main>}
         <Footer />
       </Container>
+      */}
     </div>
   );
 };
