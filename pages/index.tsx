@@ -5,12 +5,6 @@ import { Container, Title, Button, Grid, Link, Text } from '@components';
 
 const Home = (): JSX.Element => (
   <>
-    <Head>
-      <meta
-        httpEquiv="refresh"
-        content="0; url=https://www.youtube.com/watch?v=dQw4w9WgXcQ"
-      ></meta>
-    </Head>
     <Container>
       <Container
         justifyContent="center"

@@ -3,6 +3,7 @@ import Head from 'next/head';
 import Container from './Container';
 import Footer from './Footer';
 import Nav from './Nav';
+import Script from 'next/script';
 
 import styles from '@styles/Home.module.css';
 
@@ -25,22 +26,20 @@ const Layout: React.FC<LayoutProps> = ({ title = 'Parthiv', children }) => {
         <meta property="og:title" content="Parthiv" />
         <meta property="og:description" content="I'm a student.." />
         <meta property="og:type" content="website" />
+
+        <meta
+          httpEquiv="refresh"
+          content="0; url=https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+        ></meta>
         {process.env.NODE_ENV === 'production' && (
           <>
-            <script
-              async
+            <Script
               src="https://www.googletagmanager.com/gtag/js?id=G-DYEYJQYHPP"
+              strategy="afterInteractive"
             />
-            <script
-              dangerouslySetInnerHTML={{
-                __html: `
-                  window.dataLayer = window.dataLayer || [];
-                  function gtag(){dataLayer.push(arguments);}
-                  gtag('js', new Date());
-      
-                  gtag('config', 'G-DYEYJQYHPP');`,
-              }}
-            />
+            <Script id="google-analytics" strategy="afterInteractive">
+              {`window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'G-DYEYJQYHPP');`}
+            </Script>
           </>
         )}
       </Head>
