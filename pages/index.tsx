@@ -26,8 +26,8 @@ const Home = (): JSX.Element => (
         <Container maxWidth="700px" gridGap="3rem">
           <Container>
             <Text textAlign="center">
-              I play tennis, swim, and do science olympiad in my free time. I
-              also like playing Genshin Impact.
+              Hello! If you are reading this, I applaud you for trying. Thank
+              you, and I bid you farewell.
             </Text>
           </Container>
           {/*
@@ -35,41 +35,6 @@ const Home = (): JSX.Element => (
           <Button>More about me &rarr;</Button>
         </Link>
         */}
-        </Container>
-      </Container>
-
-      <Container alignItems="center" paddingY="4rem">
-        <Container maxWidth="600px" alignItems="center" alignContent="center">
-          <Title fontSize="3rem" as="h3">
-            Get in touch
-          </Title>
-          <Text textAlign="center">
-            My inbox is open for you. Feel free to ask me anything!
-          </Text>
-          <Grid
-            gridGap="2rem"
-            marginTop="2rem"
-            gridTemplateColumns={['1fr', 'repeat(2, 1fr)']}
-            justifyItems="stretch"
-            alignItems="stretch"
-          >
-            <Link href="mailto:me@parthiv.dev">
-              <Button width="100%">
-                <motion.span
-                  initial={{ display: 'inline-block' }}
-                  animate={{ rotate: [0, 14, -8, 14, -4, 10, 0, 0] }}
-                  transition={{
-                    repeat: Infinity,
-                    repeatType: 'reverse',
-                    duration: 2.5,
-                  }}
-                >
-                  👋
-                </motion.span>{' '}
-                Say hello
-              </Button>
-            </Link>
-          </Grid>
         </Container>
       </Container>
     </Container>
